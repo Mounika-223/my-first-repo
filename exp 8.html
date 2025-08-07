@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Business Card</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #111, #1a1a1a);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .card {
+      background: #222;
+      border-radius: 16px;
+      padding: 30px;
+      width: 320px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(
+        from 0deg,
+        #00ffe0,
+        #00ff94,
+        #00ffe0,
+        #00ff94
+      );
+      animation: rotate 6s linear infinite;
+      z-index: 0;
+      opacity: 0.1;
+    }
+
+    @keyframes rotate {
+      to {
+        transform: rotate(1turn);
+      }
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .name {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #00ffe0;
+    }
+
+    .title {
+      font-size: 1em;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      font-size: 0.9em;
+      line-height: 1.6;
+    }
+
+    .contact-info span {
+      display: block;
+    }
+
+    .socials {
+      margin-top: 20px;
+    }
+
+    .socials a {
+      text-decoration: none;
+      margin-right: 10px;
+      color: #00ff94;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: #00ffe0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-content">
+      <div class="name">Alex Quantum</div>
+      <div class="title">Creative Technologist</div>
+      <div class="contact-info">
+        <span>Email: alex@quantum.dev</span>
+        <span>Phone: +1 555 010 2025</span>
+        <span>Website: www.quantum.dev</span>
+      </div>
+      <div class="socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">X</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
